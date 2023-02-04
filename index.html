@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.6">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <script src="https://kit.fontawesome.com/76edf1e5d3.js" crossorigin="anonymous"></script>
+
+  <title>ES8 Project</title>
+ </head>
+  <link rel="stylesheet"href="style.css">
+  <script src="https://kit.fontawesome.com/76edf1e5d3.js" crossorigin="anonymous"></script> 
+<body>
+   <div class="form-box">
+     <h1 id="title">Plannorium Sign Up</h1>
+     <form>
+       <div class="input-group">
+        <div class="input-field" id= "nameField">
+        <i class="fas fa-user"></i>
+         <input type="text" placeholder="Name">
+        </div>
+
+        <div class="input-field" id="emailfield">
+        <i class="fas fa-envelope"></i> 
+         <input type="email" placeholder="Email">
+        </div>
+        
+        <div class="input-field" id="passField">
+        <i class="fas fa-lock"></i> 
+         <input type="password" placeholder="Password">
+        </div>
+        <p>lost password?<a href="#"> click here</a></p>
+      </div>
+        <div class="btn-field">
+          <button id="signupBtn" type="button">Sign Up</button>
+          <button id="signinBtn" type="button" class="disable">Sign In</button>
+        </div>
+     </form>
+   </div>
+ <script>
+   
+   let signupBtn = document.getElementById("signupBtn")
+   let signinBtn = document.getElementById("signinBtn")
+   let nameField = document.getElementById("nameField")
+   let title = document.getElementById("title")
+   
+   
+   signinBtn.onclick = function(){
+     nameField.style.maxHeight = "0"
+     title.innerHTML = "Plannorium Sign In"
+     signupBtn.classList.add("disable")
+     signinBtn.classList.remove("disable")
+   }
+   
+   signupBtn.onclick = function(){
+     nameField.style.maxHeight = "65px"
+     title.innerHTML = "Plannorium Sign Up"
+     signinBtn.classList.add("disable")
+     signupBtn.classList.remove("disable")
+   }
+ </script>
+</body>
+</html>
